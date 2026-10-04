@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 1080px; height: 1920px; overflow: hidden; }
+  body {
+    font-family: "Microsoft YaHei", "PingFang SC", sans-serif;
+    background: radial-gradient(ellipse at 50% 0%, #10162b 0%, #070a14 55%, #04060c 100%);
+    color: #eef2ff;
+    display: flex; flex-direction: column; align-items: center;
+    position: relative;
+  }
+  .deco-blob {
+    position: absolute; border-radius: 50%; filter: blur(90px); opacity: .35; pointer-events: none;
+  }
+  .b1 { width: 620px; height: 620px; background: #1d5fd8; top: -180px; left: -160px; }
+  .b2 { width: 520px; height: 520px; background: #c2372e; bottom: 240px; right: -180px; opacity: .22; }
+  .tag {
+    margin-top: 150px;
+    font-size: 34px; letter-spacing: 14px; color: #7fa8ff;
+    border: 2px solid rgba(127,168,255,.45); border-radius: 999px;
+    padding: 16px 46px 16px 60px;
+  }
+  h1 {
+    margin-top: 70px; font-size: 128px; font-weight: 800; letter-spacing: 6px;
+    background: linear-gradient(100deg, #6fb3ff 0%, #b8e1ff 40%, #ff9d7a 80%);
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+  }
+  .en {
+    margin-top: 18px; font-size: 44px; letter-spacing: 10px; color: #93a4c8; font-weight: 300;
+  }
+  .divider { width: 180px; height: 5px; border-radius: 3px; margin: 64px 0 56px;
+    background: linear-gradient(90deg, #3d7bff, #ff7a55); }
+  .desc {
+    width: 840px; font-size: 42px; line-height: 1.75; text-align: center; color: #cdd8f2;
+  }
+  .desc b { color: #8fc0ff; font-weight: 700; }
+  .cards { margin-top: 84px; width: 900px; display: flex; flex-direction: column; gap: 34px; }
+  .card {
+    background: rgba(255,255,255,.055); border: 1px solid rgba(140,170,255,.22);
+    border-radius: 26px; padding: 40px 48px; display: flex; align-items: center; gap: 36px;
+  }
+  .card .ico {
+    flex: 0 0 92px; height: 92px; border-radius: 22px; display: flex; align-items: center; justify-content: center;
+    font-size: 48px;
+  }
+  .i1 { background: linear-gradient(135deg, #1d5fd8, #4aa3ff); }
+  .i2 { background: linear-gradient(135deg, #7a3bd0, #c255e8); }
+  .i3 { background: linear-gradient(135deg, #c2372e, #ff8a5c); }
+  .card h3 { font-size: 40px; margin-bottom: 10px; }
+  .card p { font-size: 30px; color: #9fb0d4; line-height: 1.5; }
+  .foot {
+    position: absolute; bottom: 110px; font-size: 30px; color: #6d7ea6; letter-spacing: 4px;
+  }
+  .num { position: absolute; bottom: 52px; font-size: 26px; color: #46547a; letter-spacing: 6px; }
+</style>
+</head>
+<body>
+  <div class="deco-blob b1"></div>
+  <div class="deco-blob b2"></div>
+
+  <div class="tag">实 时 流 体 模 拟</div>
+  <h1>流体画布</h1>
+  <div class="en">FLUID CANVAS</div>
+  <div class="divider"></div>
+
+  <div class="desc">
+    在浏览器里求解 <b>Navier-Stokes 方程</b>，<br>
+    拖动鼠标，让染料在涡流中<b>绽放、翻卷、流淌</b>。
+  </div>
+
+  <div class="cards">
+    <div class="card">
+      <div class="ico i1">🌊</div>
+      <div>
+        <h3>GPU 实时求解</h3>
+        <p>WebGL + GLSL 片元着色器，速度场 / 染料场双缓冲 ping-pong</p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="ico i2">🖱️</div>
+      <div>
+        <h3>指尖作画</h3>
+        <p>拖动喷射染料 · 点击放置墨滴 · 涡量约束卷出细腻漩涡</p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="ico i3">📦</div>
+      <div>
+        <h3>单文件零依赖</h3>
+        <p>一个 index.html 共 782 行，双击即用，10/10 自动化验证通过</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="foot">WebGL · Stable Fluids · GLSL ES 1.00</div>
+  <div class="num">01 / 03</div>
+</body>
+</html>

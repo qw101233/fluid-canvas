@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 1080px; height: 1920px; overflow: hidden; }
+  body {
+    font-family: "Microsoft YaHei", "PingFang SC", sans-serif;
+    background: linear-gradient(180deg, #070a14 0%, #0b1224 50%, #070a14 100%);
+    color: #eef2ff;
+    display: flex; flex-direction: column; align-items: center;
+    position: relative;
+  }
+  .head { margin-top: 130px; text-align: center; }
+  .kicker { font-size: 32px; letter-spacing: 12px; color: #7fa8ff; }
+  h1 { margin-top: 24px; font-size: 88px; font-weight: 800; letter-spacing: 4px; }
+  h1 span { color: #ff9d7a; }
+  .shots { margin-top: 76px; width: 960px; display: flex; flex-direction: column; gap: 56px; }
+  .shot { position: relative; }
+  .shot img {
+    width: 960px; border-radius: 24px; display: block;
+    border: 1px solid rgba(140,170,255,.28);
+    box-shadow: 0 22px 70px rgba(0,0,0,.6);
+  }
+  .badge {
+    position: absolute; left: 30px; top: -28px;
+    background: linear-gradient(95deg, #3d7bff, #6fb3ff);
+    color: #fff; font-size: 32px; font-weight: 700; letter-spacing: 3px;
+    padding: 14px 34px; border-radius: 999px;
+    box-shadow: 0 8px 24px rgba(61,123,255,.4);
+  }
+  .badge.o { background: linear-gradient(95deg, #c2372e, #ff8a5c); box-shadow: 0 8px 24px rgba(255,110,70,.35); }
+  .badge.p { background: linear-gradient(95deg, #7a3bd0, #c255e8); box-shadow: 0 8px 24px rgba(180,80,230,.35); }
+  .cap {
+    margin-top: 20px; text-align: center; font-size: 32px; color: #a9b9dc; letter-spacing: 2px;
+  }
+  .foot {
+    position: absolute; bottom: 110px; font-size: 30px; color: #6d7ea6; letter-spacing: 4px; text-align: center; width: 100%;
+  }
+  .num { position: absolute; bottom: 52px; font-size: 26px; color: #46547a; letter-spacing: 6px; }
+</style>
+</head>
+<body>
+  <div class="head">
+    <div class="kicker">核 心 功 能 演 示</div>
+    <h1>三种玩法，<span>一手掌控</span></h1>
+  </div>
+
+  <div class="shots">
+    <div class="shot">
+      <div class="badge">绽放</div>
+      <img src="../screenshots/demo-bloom.png">
+      <div class="cap">点击放置墨滴 —— 压力投影推开染料，涡量卷出花冠</div>
+    </div>
+
+    <div class="shot">
+      <div class="badge o">涡街</div>
+      <img src="../screenshots/demo-vortex.png">
+      <div class="cap">高速射流对撞 —— 涡量约束让漩涡链稳定成街</div>
+    </div>
+  </div>
+
+  <div class="foot">真实模拟输出 · 非手绘非摆拍</div>
+  <div class="num">02 / 03</div>
+</body>
+</html>
